@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "baseUrl": "./src",
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["DOM", "ES2017"],
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@constants/*": ["constants/*"],
+      "@lib/*": ["lib/*"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}

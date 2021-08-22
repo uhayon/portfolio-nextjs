@@ -1,0 +1,67 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": ["*.config.js", "generators/*"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": [
+    "react-hooks",
+    "testing-library",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:testing-library/react",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-console": "error",
+
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": "off",
+    
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    
+    "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+            "components": ["Link"],
+            "specialLink": ["hrefLeft", "hrefRight"],
+            "aspects": ["invalidHref", "preferButton"]
+        }
+    ],
+    "jsx-a11y/no-onchange": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

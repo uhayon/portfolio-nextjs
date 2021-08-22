@@ -1,0 +1,18 @@
+/**
+ * @jest-environment jsdom
+ */
+
+import React from "react";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
+
+import {{ pascalCase name }} from "./";
+
+describe("{{ pascalCase name }}", () => {
+  it("Should render {{pascalCase name}}", () => {
+    const { container } = render(<{{ pascalCase name }} />);
+
+    expect(container).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+});
